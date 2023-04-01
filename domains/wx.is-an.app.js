@@ -6,13 +6,16 @@ addSubDomain({
     email: 'wxxxcxx@gmail.com',
   },
   record: {
-    NS: [
-      'freedns1.registrar-servers.com',
-      'freedns2.registrar-servers.com',
-      'freedns3.registrar-servers.com',
-      'freedns4.registrar-servers.com',
-      'freedns5.registrar-servers.com',
-    ],
+    CNAME: 'bytestream.eu.org',
   },
   proxy: false,
+  nested: [
+    {
+      subdomain: 'mango',
+      record: {
+        CNAME: 'mango.bytestream.eu.org',
+      },
+      proxy: false,
+    }
+  ]
 })
